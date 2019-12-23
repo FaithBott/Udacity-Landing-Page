@@ -25,9 +25,6 @@ nav li {
     color: yellow;
 }
 
-nav li:active {
-    color: yellow;
-}
 
 body {
     background: rgb(136,203,171);

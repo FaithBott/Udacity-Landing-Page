@@ -31,17 +31,17 @@ function createNavLi() {
 function createSectionLink(section) {
     const node = document.createElement('li')
     const nodeLink = document.createElement('a')
-    nodeLink.onclick = function () {
+    nodeLink.addEventListener("click", function () {
         section.scrollIntoView()
-    }
+    });
     node.id = section.id + 'nav'
     nodeLink.innerText = section.getAttribute('data-nav')
     node.appendChild(nodeLink);
     document.getElementById('navbar__list').appendChild(node);
 }
 
+//this is setting the state to active (changes the css color to yellow)
 function setActive(id) {
-    console.log(id)
     const navlist = document.getElementsByTagName("li")
     for (const navitem of navlist) {
         navitem.classList.remove("active")
